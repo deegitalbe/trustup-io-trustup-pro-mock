@@ -10,7 +10,7 @@ data "digitalocean_sizes" "small" {
 }
 
 resource "digitalocean_kubernetes_cluster" "laravel-in-kubernetes" {
-  name = "trustup-io-monolith"
+  name = "trustup-io-trustup-pro-mock"
   region = var.do_region
 
   # Latest patched version of DigitalOcean Kubernetes.

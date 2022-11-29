@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: trustup-io-monolith-webserver
+  name: trustup-io-trustup-pro-mock-webserver
   annotations:
     # (Optional): Annotations for the Ingress Controller
     # -- ingress class is needed when traefik is not the default
@@ -26,6 +26,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: trustup-io-monolith-webserver
+            name: trustup-io-trustup-pro-mock-webserver
             port:
               number: 80

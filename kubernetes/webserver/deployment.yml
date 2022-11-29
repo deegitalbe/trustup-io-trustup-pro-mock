@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: trustup-io-monolith-webserver
+  name: trustup-io-trustup-pro-mock-webserver
   labels:
     tier: backend
     layer: webserver
@@ -19,10 +19,10 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: henrotaym/trustup-io-monolith-web:0.0.1
+          image: henrotaym/trustup-io-trustup-pro-mock-web:0.0.1
           ports:
             - containerPort: 80
           env:
             # Inject the FPM Host as we did with Docker Compose
             - name: FPM_HOST
-              value: trustup-io-monolith-fpm:9000
+              value: trustup-io-trustup-pro-mock-fpm:9000

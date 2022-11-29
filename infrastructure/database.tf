@@ -14,7 +14,7 @@ locals {
 # based on Mysql 8, which is the version DigitalOcean provides.
 # You can switch this out for Postgres by changing the `locals.` pointer to point at postgres.
 resource "digitalocean_database_cluster" "laravel-in-kubernetes" {
-  name = "trustup-io-monolith"
+  name = "trustup-io-trustup-pro-mock"
   engine = local.mysql.engine # Replace with `locals.postgres.engine` if using postgres
   version = local.mysql.version # Replace with `locals.postgres.version` if using postgres
   size = "db-s-1vcpu-1gb"

@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: trustup-io-monolith-queue-worker-default
+  name: trustup-io-trustup-pro-mock-queue-worker-default
   labels:
     tier: backend
     layer: queue-worker
     queue: default
   annotations:
-    configmap.reloader.stakater.com/reload: "trustup-io-monolith"
-    secret.reloader.stakater.com/reload: "trustup-io-monolith"
+    configmap.reloader.stakater.com/reload: "trustup-io-trustup-pro-mock"
+    secret.reloader.stakater.com/reload: "trustup-io-trustup-pro-mock"
 spec:
   replicas: 1
   selector:
@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: queue-worker
-          image: henrotaym/trustup-io-monolith-cli:0.0.1
+          image: henrotaym/trustup-io-trustup-pro-mock-cli:0.0.1
           command:
             - php
           args:
@@ -37,6 +37,6 @@ spec:
             - containerPort: 9000
           envFrom:
             - configMapRef:
-                name: trustup-io-monolith
+                name: trustup-io-trustup-pro-mock
             - secretRef:
-                name: trustup-io-monolith
+                name: trustup-io-trustup-pro-mock

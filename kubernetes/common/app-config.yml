@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: trustup-io-monolith
+  name: trustup-io-trustup-pro-mock
 data:
   APP_NAME: "task.trustup.io"
   APP_ENV: "local"
@@ -13,7 +13,7 @@ data:
   LOG_LEVEL: "debug"
 
   DB_CONNECTION: "mysql"
-  DB_HOST: "trustup-io-monolith-do-user-3877774-0.b.db.ondigitalocean.com"
+  DB_HOST: "trustup-io-trustup-pro-mock-do-user-3877774-0.b.db.ondigitalocean.com"
   DB_PORT: "25060"
   DB_DATABASE: "kubernetes_db"
 
@@ -24,7 +24,7 @@ data:
   SESSION_DRIVER: "redis"
   SESSION_LIFETIME: "120"
 
-  REDIS_HOST: "trustup-io-monolith-redis"
+  REDIS_HOST: "trustup-io-trustup-pro-mock-redis"
   REDIS_PORT: "6379"
 
   MAIL_MAILER: "smtp"
@@ -59,7 +59,7 @@ data:
   MEILISEARCH_HOST: "http://meilisearch:7700"
 
   TRUSTUP_MESSAGING_API_URL: "https://messaging.trustup.io/api"
-  TRUSTUP_MESSAGING_APP_KEY: "trustup-io-monolith"
+  TRUSTUP_MESSAGING_APP_KEY: "trustup-io-trustup-pro-mock"
   TRUSTUP_AUTH_IO_URL: "https://auth.trustup.io"
-  TRUSTUP_MODEL_BROADCAST_APP_KEY: "trustup-io-monolith"
+  TRUSTUP_MODEL_BROADCAST_APP_KEY: "trustup-io-trustup-pro-mock"
 

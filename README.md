@@ -9,11 +9,11 @@ This package is used to scaffold a preconfigured monolith application.
 Search for those values and replace them with desired values.
 
 ```shell
-monolith.trustup.io.test
+trustup-pro-mock.trustup.io.test
 ```
 
 ```shell
-trustup-io-monolith
+trustup-io-trustup-pro-mock
 ```
 
 ## Available scripts

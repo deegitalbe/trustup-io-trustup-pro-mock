@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: trustup-io-monolith-webserver
+  name: trustup-io-trustup-pro-mock-webserver
 spec:
   selector:
     tier: backend

@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: trustup-io-monolith-redis
+  name: trustup-io-trustup-pro-mock-redis
   labels:
     tier: backend
     layer: redis
 spec:
-  serviceName: trustup-io-monolith-redis
+  serviceName: trustup-io-trustup-pro-mock-redis
   selector:
     matchLabels:
       tier: backend
@@ -31,4 +31,4 @@ spec:
       volumes:
         - name: redis-aof
           persistentVolumeClaim:
-            claimName: trustup-io-monolith-redis
+            claimName: trustup-io-trustup-pro-mock-redis

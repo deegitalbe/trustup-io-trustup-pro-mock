@@ -3,7 +3,7 @@ import laravel from "laravel-vite-plugin"; // eslint-disable-line import/no-extr
 import fs from "fs";
 import { join } from "path";
 
-const host = "monolith.trustup.io.test";
+const host = "trustup-pro-mock.trustup.io.test";
 const sslPath = (extension) =>
     join(__dirname, "certs", `trustup.io.test.${extension}`);
 

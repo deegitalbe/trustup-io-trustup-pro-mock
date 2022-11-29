@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: trustup-io-monolith-fpm
+  name: trustup-io-trustup-pro-mock-fpm
   labels:
     tier: backend
     layer: fpm
   annotations:
-    configmap.reloader.stakater.com/reload: "trustup-io-monolith"
-    secret.reloader.stakater.com/reload: "trustup-io-monolith"
+    configmap.reloader.stakater.com/reload: "trustup-io-trustup-pro-mock"
+    secret.reloader.stakater.com/reload: "trustup-io-trustup-pro-mock"
 spec:
   replicas: 1
   selector:
@@ -22,7 +22,7 @@ spec:
     spec:
       initContainers:
         - name: migrations
-          image: henrotaym/trustup-io-monolith-cli:0.0.1
+          image: henrotaym/trustup-io-trustup-pro-mock-cli:0.0.1
           command:
             - php
           args:
@@ -31,12 +31,12 @@ spec:
             - --force
           envFrom:
             - configMapRef:
-                name: trustup-io-monolith
+                name: trustup-io-trustup-pro-mock
             - secretRef:
-                name: trustup-io-monolith
+                name: trustup-io-trustup-pro-mock
       containers:
         - name: fpm
-          image: henrotaym/trustup-io-monolith-fpm:0.0.1
+          image: henrotaym/trustup-io-trustup-pro-mock-fpm:0.0.1
           ports:
             - containerPort: 9000
           command: ["/bin/sh"]
@@ -46,6 +46,6 @@ spec:
             exec php-fpm"]
           envFrom:
             - configMapRef:
-                name: trustup-io-monolith
+                name: trustup-io-trustup-pro-mock
             - secretRef:
-                name: trustup-io-monolith
+                name: trustup-io-trustup-pro-mock
