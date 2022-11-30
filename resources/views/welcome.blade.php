@@ -41,7 +41,7 @@
                 
                 @endforeach
             </div>
-            <div id="container" class="prose col-span-2 p-4">
+            <div id="container" class="prose col-span-2 p-4 pl-8">
                 Select a update to see what is inside
             </div>
         </div>
