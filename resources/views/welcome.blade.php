@@ -22,10 +22,10 @@
         </style>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="antialiased p-10">
+    <body class="antialiased overflow-hidden p-10">
         <h1 class="text-5xl mb-4">Nouveautés</h1>
-        <div class=" border border-slate-200 grid grid-cols-3 p-8">
-            <div class=" col-span-1">
+        <div class=" h-screen border border-slate-200 grid grid-cols-3 p-8">
+            <div class=" overflow-scroll col-span-1">
                 @foreach($updates as $update_published => $group)
                     <div class="p-4 font-bold text-slate-400">{{ date('l d F Y' , strtotime($update_published)) }}</div>
                     @foreach($group as $update)
