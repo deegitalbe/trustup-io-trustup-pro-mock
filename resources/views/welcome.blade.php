@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <title>trustup-io-trustup-pro-mock</title>
 
         <!-- Fonts -->
@@ -24,21 +23,25 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased p-10">
-        <h1 class="text-5xl">Nouveautés</h1>
-        <div class="bg-red-200 grid grid-cols-3 p-8">
-            <div class="bg-green-200 col-span-1">
-                @foreach($updates as $update)
-                <div id="{{ $update->uuid }}" onclick="select( '{{ $update->uuid }}', '{{ $update->title }}', '{{ $update->excerpt }}' )" class="bg-orange-200 update p-4 m-4 flex items-center rounded-lg">
-                    <i class="{{ $update->icon }} p-4 text-2xl"></i>
-                    <div>
-                        <div class="text-xl font-bold">{{ $update->title }}</div>
-                        <div>{{ $update->project->title }}</div>
-                    </div>
-                    
-                </div>
+        <h1 class="text-5xl mb-4">Nouveautés</h1>
+        <div class=" border border-slate-200 grid grid-cols-3 p-8">
+            <div class=" col-span-1">
+                @foreach($updates as $update_published => $group)
+                    <div class="p-4 font-bold text-slate-400">{{ date('l d F Y' , strtotime($update_published)) }}</div>
+                    @foreach($group as $update)
+                        <div id="{{ $update->uuid }}" onclick="select( '{{ $update->uuid }}', '{{ $update->title }}', '{{ $update->excerpt }}' )" class=" update cursor-pointer p-4 m-4 flex items-center rounded-lg">
+                            <i class="{{ $update->icon }} p-4 text-2xl"></i>
+                            <div>
+                                <div class="text-xl font-bold">{{ $update->title }}</div>
+                                <div>{{ $update->project->title }}</div>
+                            </div>
+                        
+                        </div>
+                    @endforeach
+                
                 @endforeach
             </div>
-            <div id="container" class="bg-blue-200 prose col-span-2 p-4">
+            <div id="container" class="prose col-span-2 p-4">
                 Select a update to see what is inside
             </div>
         </div>
@@ -47,9 +50,9 @@
             function select(id, title, excerpt){
                let element = document.getElementsByClassName('update');
                for( let i =0; i < element.length; i++) {
-                    element[i].classList.remove('bg-white');
+                    element[i].classList.remove('bg-slate-100');
                }
-               document.getElementById(`${id}`).classList.add('bg-white');
+               document.getElementById(`${id}`).classList.add('bg-slate-100');
 
                document.getElementById('container').innerHTML = "<h2>" + title + "</h2>" + "<p>" + excerpt + "</p>"
             }
