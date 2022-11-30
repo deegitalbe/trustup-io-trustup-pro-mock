@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "416313db09aac962f8828344f5232f5a",
+    "content-hash": "0d1e5b72c65b8f827999ee0731d4768d",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -1538,16 +1538,16 @@
         },
         {
             "name": "henrotaym/laravel-api-client",
-            "version": "v1.5.2",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/henrotaym/laravel-api-client.git",
-                "reference": "25cb8c32e78c1cfaa89c77986e1ec7fa6ae3bdd4"
+                "reference": "bd6fc09567a99c3a4364be66a6d10291b7ffe7d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/henrotaym/laravel-api-client/zipball/25cb8c32e78c1cfaa89c77986e1ec7fa6ae3bdd4",
-                "reference": "25cb8c32e78c1cfaa89c77986e1ec7fa6ae3bdd4",
+                "url": "https://api.github.com/repos/henrotaym/laravel-api-client/zipball/bd6fc09567a99c3a4364be66a6d10291b7ffe7d1",
+                "reference": "bd6fc09567a99c3a4364be66a6d10291b7ffe7d1",
                 "shasum": ""
             },
             "require": {
@@ -1585,9 +1585,9 @@
             "description": "Fluent api client using laravel Http facade.",
             "support": {
                 "issues": "https://github.com/henrotaym/laravel-api-client/issues",
-                "source": "https://github.com/henrotaym/laravel-api-client/tree/v1.5.2"
+                "source": "https://github.com/henrotaym/laravel-api-client/tree/v1.6.0"
             },
-            "time": "2022-10-04T06:05:37+00:00"
+            "time": "2022-11-25T00:45:17+00:00"
         },
         {
             "name": "henrotaym/laravel-container-auto-register",

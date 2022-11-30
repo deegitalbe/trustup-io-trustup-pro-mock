@@ -10,6 +10,7 @@
         "deegitalbe/server-authorization": "^1.2",
         "doctrine/dbal": "^3.4",
         "guzzlehttp/guzzle": "^7.2",
+        "henrotaym/laravel-api-client": "^1.6",
         "henrotaym/laravel-model-queries": "^1.4",
         "henrotaym/laravel-trustup-messaging-io": "^0.0.4",
         "henrotaym/laravel-trustup-task-io-common": "^1.1",
