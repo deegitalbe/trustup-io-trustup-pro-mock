@@ -12,6 +12,7 @@
 */
 
 use App\Http\Controllers\UpdateController;
+use Deegitalbe\ServerAuthorization\Http\Middleware\AuthorizedServer;
 use Illuminate\Support\Facades\Route;
 
-Route::get('changelog/index/updates/invalidate-cache' , [UpdateController::class, 'invalidCache']);
+Route::middleware(AuthorizedServer::class)->get('changelog/index/updates/invalidate-cache' , [UpdateController::class, 'invalidCache']);
