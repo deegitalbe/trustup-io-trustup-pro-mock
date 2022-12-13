@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\UpdateController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [UpdateController::class, 'index'])->name('update_index');
+// Route::get('/', [UpdateController::class, 'index'])->name('update_index');
+
+Route::get('/', [TestController::class, 'index'])->name('test_index');
