@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3cf0b6d60c8adbdb2801cacc497bc3c",
+    "content-hash": "8ade46c353bc18d50c50fbfab9bf79ea",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -315,16 +315,16 @@
         },
         {
             "name": "deegitalbe/laravel-trustup-io-projects",
-            "version": "v0.0.21",
+            "version": "v0.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deegitalbe/laravel-trustup-io-projects.git",
-                "reference": "ecdc5e2464b9a004a0535be6ef8eaa3512665393"
+                "reference": "526c4992ea105b48e879b4350f4edd05e079296c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deegitalbe/laravel-trustup-io-projects/zipball/ecdc5e2464b9a004a0535be6ef8eaa3512665393",
-                "reference": "ecdc5e2464b9a004a0535be6ef8eaa3512665393",
+                "url": "https://api.github.com/repos/deegitalbe/laravel-trustup-io-projects/zipball/526c4992ea105b48e879b4350f4edd05e079296c",
+                "reference": "526c4992ea105b48e879b4350f4edd05e079296c",
                 "shasum": ""
             },
             "require": {
@@ -367,9 +367,9 @@
             "description": "Basic versioned php package.",
             "support": {
                 "issues": "https://github.com/deegitalbe/laravel-trustup-io-projects/issues",
-                "source": "https://github.com/deegitalbe/laravel-trustup-io-projects/tree/v0.0.21"
+                "source": "https://github.com/deegitalbe/laravel-trustup-io-projects/tree/v0.0.23"
             },
-            "time": "2022-12-13T12:51:50+00:00"
+            "time": "2022-12-13T15:46:12+00:00"
         },
         {
             "name": "deegitalbe/laravel-trustup-io-websocket",
